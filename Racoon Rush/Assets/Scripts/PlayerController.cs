@@ -1,30 +1,85 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rb2d;
+    Rigidbody2D rb;
 
-
+    [Header("Character Jump")]
     public float jumpForce;
+
+    [Header("UI")]
+    public Text scoreText;
+    private int score = 0;
+    private float lastUpdate = 0;
+
+    public Text highScore;
 
     private void Awake()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-
+        ScoreUI();
+        HighScore();
     }
 
     private void Update()
     {
+        //Player Movement
         if (Input.GetButtonDown("Jump"))
         {
-            rb2d.velocity = Vector2.up * jumpForce;
+            rb.velocity = Vector2.up * jumpForce;
         }
 
+
+        //UI Display & Updates
+        ScoreUI();
+        IncreaseScore();
+
+        ResetHighScore();
+    }
+
+    private void IncreaseScore()
+    {
+        if(Time.time - lastUpdate >= 1f)
+        {
+            score++;
+            lastUpdate = Time.time;
+        }
+    }
+
+
+    //UI
+    public void ScoreUI()
+    {
+        scoreText.text = "Score " + score.ToString();
+
+        if(score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            //Get a particle effect/sound to congratulate new high score
+            highScore.text = "High Score: " + score.ToString();
+        }
+        
+    }
+
+    void HighScore()
+    {
+        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
+
+    void ResetHighScore()
+    {
+        //Press during game to reset high score to 0
+        if(Input.GetKey(KeyCode.Q))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+        
     }
 }
