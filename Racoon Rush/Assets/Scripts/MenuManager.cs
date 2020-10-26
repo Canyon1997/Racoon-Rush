@@ -15,6 +15,11 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("SantisGameplay");
     }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("SantisMenus");
+    }
     public void QuitGame()
     {
         Debug.Log("I quit!!!");
