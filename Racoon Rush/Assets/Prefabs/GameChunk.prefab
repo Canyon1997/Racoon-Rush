@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937407046824707078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: -0.3, z: -0.0064792633}
+  m_LocalPosition: {x: -5.49, y: 0.26, z: -0.0064792633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937407048635329568}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937407046876020062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.567026, y: -0.34000003, z: 0}
+  m_LocalPosition: {x: -7.567026, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937407047608009911}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 937407048034291956}
   - component: {fileID: 937407048034291957}
   - component: {fileID: 937407048034291958}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}

@@ -17,7 +17,7 @@ public class ChunkSpawner : MonoBehaviour
 	{
 		if (collision.tag == "Player")
 		{
-		Vector3 spawnLocation =  gameChunkParent.transform.position + new Vector3(30f, 0, 0);
+		Vector3 spawnLocation =  gameChunkParent.transform.position + new Vector3(20f, 0, 0);
 		var newChunk = Instantiate(chunkPrefab, spawnLocation, Quaternion.identity);
 		newChunk.name = "GameChunk";
 		}
