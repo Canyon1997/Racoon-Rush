@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7827435647821471853}
   - component: {fileID: 7827435647821471842}
   m_Layer: 0
-  m_Name: GameChunk
+  m_Name: GameChunk V1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyPrefab: {fileID: 3528344027410157686, guid: 8240a976ee831dd43baa3b1d23ff7543, type: 3}
-  candyChance: 20
+  candyChance: 80
   obstaclePrefabs:
   - {fileID: 8750862434803344598, guid: 3a6319a4654e1614dae126ab6e424b9b, type: 3}
   - {fileID: 1466455718369151381, guid: 94a96d62e8487b14dabe5ec98a283ee3, type: 3}
@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 7827435649746947929}
   - {fileID: 7827435647929347572}
   - {fileID: 7827435649432307175}
-  obstacleChance: 30
+  obstacleChance: 50
   TrashPointsPrefab: {fileID: 5411090437880373899, guid: 4187a658c0b43a741a1c66ce998e1416, type: 3}
   TrashPointsHotspots:
   - {fileID: 7827435648719120328}
@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 7827435648559361969}
   - {fileID: 7827435647873495299}
   - {fileID: 7827435649550070346}
-  TrashPointsChance: 10
+  TrashPointsChance: 50
 --- !u!1 &7827435647873495299
 GameObject:
   m_ObjectHideFlags: 0
