@@ -809,6 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 150
+  maxJumps: 0
 --- !u!1 &961132154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101774903699305914, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98
+      value: 7.22
       objectReference: {fileID: 0}
     - target: {fileID: 7101774903699305914, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_LocalPosition.z

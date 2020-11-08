@@ -9,7 +9,7 @@ public class PlayerJump : MonoBehaviour
     public float jumpForce;
 
     private bool jumped;
-    private int maxJumps;
+    public int maxJumps;
 
     private void Awake()
     {
@@ -31,6 +31,14 @@ public class PlayerJump : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce);
             maxJumps++;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Ground"))
+        {
+            maxJumps = 0;
         }
     }
 }
