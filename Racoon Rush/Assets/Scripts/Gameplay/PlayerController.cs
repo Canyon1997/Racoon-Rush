@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
 
     [Header("Character")]
-    public float jumpForce;
     public float moveSpeed;
 
     [Header("UI")]
@@ -31,13 +30,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //Player Movement
-        if (Input.GetButtonDown("Jump"))
-        {
-            rb.velocity = Vector2.up * jumpForce;
-        }
-
-
         //UI Display & Updates
         ScoreUI();
         IncreaseScore();
@@ -54,7 +46,6 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(Vector2.right * moveSpeed);
     }
-
 
     private void IncreaseScore()
     {
