@@ -12,7 +12,7 @@ public class ObjectCleanup : MonoBehaviour
 
 	IEnumerator CleanUp()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(10);
 		Destroy(this.gameObject);
 	}
 }

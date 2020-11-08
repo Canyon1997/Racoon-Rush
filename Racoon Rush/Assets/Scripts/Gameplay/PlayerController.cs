@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PlayerController : MonoBehaviour
     public Text scoreText;
     private int score = 0;
     private float lastUpdate = 0;
+
+    private bool isSlowed;
+    public static float staticMovementSpeed;
+    public float trapSlowTime = 2f;
+    private float savedSpeed;
 
     public Text highScore;
 
@@ -54,6 +60,8 @@ public class PlayerController : MonoBehaviour
             score++;
             lastUpdate = Time.time;
         }
+
+        
     }
 
 
@@ -85,4 +93,38 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isSlowed)
+		{
+			staticMovementSpeed = moveSpeed;
+		}
+        
+        if (other.gameObject.CompareTag("Trash"))
+        {
+			Destroy(other.gameObject);
+            score += 100;
+            
+        }
+
+        else if (other.gameObject.CompareTag("Trap"))
+        {
+            if (!isSlowed)
+			{
+				StartCoroutine(TrapSlow());
+				isSlowed = true;
+			}
+        }
+    }
+
+    IEnumerator TrapSlow()
+	{
+		var savedSpeed = moveSpeed;
+		moveSpeed -= (moveSpeed / 1.5f);
+		yield return new WaitForSeconds(trapSlowTime);
+		moveSpeed = savedSpeed;
+		isSlowed = false;
+	}
 }

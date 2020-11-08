@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4290483160766396602}
   m_Layer: 0
   m_Name: Trash Bag
-  m_TagString: Untagged
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 5411090437880373898}
   m_Layer: 0
   m_Name: Trashbag Prefab
-  m_TagString: Untagged
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

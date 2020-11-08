@@ -37,6 +37,7 @@ public class ChunkRandomizer : MonoBehaviour
 			if (Random.Range(0, 100) < TrashPointsChance * difficultyScale)
 			{
 				Instantiate(candyPrefab, hotspot.transform.position, Quaternion.identity);
+				Instantiate(TrashPointsPrefab, hotspot.transform.position, Quaternion.identity);
 			}
 		}
     }
