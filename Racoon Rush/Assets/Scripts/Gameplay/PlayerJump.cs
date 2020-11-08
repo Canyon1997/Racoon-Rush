@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     Rigidbody2D rb;
     public float jumpForce;
 
-    private bool jumped;
+    public bool jumped;
     public int maxJumps;
 
     private void Awake()
@@ -39,6 +39,7 @@ public class PlayerJump : MonoBehaviour
         if(collision.collider.CompareTag("Ground"))
         {
             maxJumps = 0;
+            jumped = false;
         }
     }
 }
