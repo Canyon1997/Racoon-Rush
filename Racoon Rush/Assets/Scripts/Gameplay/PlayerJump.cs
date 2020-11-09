@@ -11,6 +11,11 @@ public class PlayerJump : MonoBehaviour
     public bool jumped;
     public int maxJumps;
 
+    [Header("Audio")]
+    public AudioSource sounds;
+    public AudioClip jumpSound;
+    public AudioClip pickupSound;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +35,7 @@ public class PlayerJump : MonoBehaviour
         if(jumped && maxJumps == 0)
         {
             rb.AddForce(Vector2.up * jumpForce);
+            sounds.PlayOneShot(jumpSound);
             maxJumps++;
         }
     }

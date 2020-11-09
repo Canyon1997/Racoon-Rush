@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     [Header("Character")]
     public float moveSpeed;
 
+    [Header("Audio")]
+    public AudioSource sounds;
+    public AudioClip pickupSound;
+
     [Header("UI")]
     public Text scoreText;
     private int score = 0;
@@ -41,6 +45,8 @@ public class PlayerController : MonoBehaviour
         IncreaseScore();
 
         ResetHighScore();
+
+        QuitGame();
     }
 
     private void FixedUpdate()
@@ -53,6 +59,14 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(Vector2.right * moveSpeed);
     }
 
+    private void QuitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private void IncreaseScore()
     {
         if(Time.time - lastUpdate >= 1f)
@@ -63,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
         
     }
-
 
     //UI
     public void ScoreUI()
@@ -105,6 +118,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Trash"))
         {
 			Destroy(other.gameObject);
+            sounds.PlayOneShot(pickupSound);
             score += 100;
             
         }

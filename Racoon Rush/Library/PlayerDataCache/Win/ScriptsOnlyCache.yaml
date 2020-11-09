@@ -53,34 +53,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 12060}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12136}
     - Class: 114
-      Script: {instanceID: 12660}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 14086}
     - Class: 114
-      Script: {instanceID: 14420}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 14428}
+      Script: {instanceID: 14414}
     - Class: 114
-      Script: {instanceID: 14930}
+      Script: {instanceID: 14916}
     - Class: 114
-      Script: {instanceID: 15058}
+      Script: {instanceID: 15044}
     - Class: 114
-      Script: {instanceID: 15096}
+      Script: {instanceID: 15082}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -119,21 +123,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12060}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 13586}
     - Class: 114
-      Script: {instanceID: 14420}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 15058}
+      Script: {instanceID: 15044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,21 +172,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12060}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 13586}
     - Class: 114
-      Script: {instanceID: 14420}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 15058}
+      Script: {instanceID: 15044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,6 +204,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -260,12 +270,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: fd8b23ad3c9e81bc85b197495bc510ac
@@ -400,7 +404,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: f574998cd09564795ca7178ec44ed2b6
+      Hash: dc7b1f94d4fadef3c310ddeef8cf38fd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerJump
@@ -592,7 +596,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: a70a66535de9317a6bfe09e85ab154d4
+      Hash: 61c32d9e6b6830ccc2c2b216ed2c501c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -751,4 +755,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SantisMenus.unity
   - Assets/Scenes/SantisLoseScreen.unity
   - Assets/Scenes/SantisGameplay.unity
-  playerPath: C:/Users/Canyon/Desktop/Unity Projects/Builds/Raccoon Rush/Racoon Rush.exe
+  playerPath: C:/Users/Canyon/Desktop/Unity Projects/Builds/Raccoon-Rush/Racoon Rush.exe
