@@ -288,7 +288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &103893283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -414,7 +414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  player: {fileID: 0}
 --- !u!61 &103893288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -818,8 +817,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.614376, y: 18.285976, z: -48.39035}
-  m_LocalScale: {x: 5.398673, y: 5.398673, z: 5.398673}
+  m_LocalPosition: {x: 13.5, y: 18, z: -48}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 937269055}
   m_RootOrder: 7
@@ -1565,6 +1564,10 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: 680a02a4c1304094b8e601bd3469880c, type: 3}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 937269054, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_Mass
       value: 0.5
@@ -1575,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101774903699305914, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.08
+      value: -5.63
       objectReference: {fileID: 0}
     - target: {fileID: 7101774903699305914, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_LocalPosition.y

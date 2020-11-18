@@ -6,13 +6,10 @@ using UnityEngine.SceneManagement;
 public class EnemyAI : MonoBehaviour
 {
 	public float movementSpeed = 3f;
-	public Transform player;
 
-	private void FixedUpdate()
+    private void Update()
 	{
 		transform.Translate(Vector2.right * Time.deltaTime * movementSpeed);
-
-		
 	}
 
     private void OnTriggerEnter2D(Collider2D other)
