@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Character")]
     public float moveSpeed;
+    [SerializeField] private float candyMoveSpeedIncrease;
 
     [Header("Audio")]
     public AudioSource sounds;
@@ -129,7 +130,15 @@ public class PlayerController : MonoBehaviour
 			{
 				StartCoroutine(TrapSlow());
 				isSlowed = true;
+                //Need a sound for this pickup
 			}
+        }
+
+        else if(other.gameObject.CompareTag("Candy"))
+        {
+            moveSpeed += candyMoveSpeedIncrease;
+            Destroy(other.gameObject);
+            //Need a sound for this pickup
         }
     }
 
