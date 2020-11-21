@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3528344025857541603}
   m_Layer: 0
   m_Name: Candy
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3528344027410157687}
   m_Layer: 0
   m_Name: Energy Prefab
-  m_TagString: Untagged
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

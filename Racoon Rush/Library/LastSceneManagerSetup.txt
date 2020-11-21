@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/karen.unity
+- path: Assets/Scenes/SantisGameplay.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

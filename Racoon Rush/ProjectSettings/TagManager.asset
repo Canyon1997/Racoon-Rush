@@ -10,6 +10,7 @@ TagManager:
   - Trap
   - Trash
   - Background
+  - Candy
   layers:
   - Default
   - TransparentFX
