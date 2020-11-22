@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Raccoon")
         {
            Debug.Log("Hit Detected. You Lose!!");
            SceneManager.LoadScene("SantisLoseScreen");
