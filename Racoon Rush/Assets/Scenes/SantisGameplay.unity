@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8cf924973022540b7cc6c9449311e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 150
+  jumpForce: 200
   jumped: 0
   maxJumps: 0
   sounds: {fileID: 937269057}

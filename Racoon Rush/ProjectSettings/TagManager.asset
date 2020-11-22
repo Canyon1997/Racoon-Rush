@@ -11,6 +11,7 @@ TagManager:
   - Trash
   - Background
   - Candy
+  - TrashCan
   layers:
   - Default
   - TransparentFX
