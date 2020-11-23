@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyPrefab: {fileID: 3528344027410157686, guid: 8240a976ee831dd43baa3b1d23ff7543, type: 3}
-  candyChance: 5
+  candyChance: 1
   obstaclePrefabs:
   - {fileID: 8750862434803344598, guid: 3a6319a4654e1614dae126ab6e424b9b, type: 3}
   - {fileID: 1466455718369151381, guid: 94a96d62e8487b14dabe5ec98a283ee3, type: 3}

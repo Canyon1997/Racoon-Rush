@@ -412,13 +412,13 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Canyon\Desktop\Unity Projects\Racoon-Rush\Racoon Rush
+  m_LastProjectPath: C:\Users\Santiago Vega\Documents\GitHub\Racoon-Rush\Racoon Rush
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 7}
-    m_SelectedIDs: 92400000
-    m_LastClickedID: 16530
+    m_SelectedIDs: 90400000
+    m_LastClickedID: 16528
     m_ExpandedIDs: 000000007c4000007e400000804000008240000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -631,9 +631,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 31.14388, y: 4.2586894, z: -52.68561}
+    m_Target: {x: 4.5060453, y: 1.2817085, z: -52.67404}
     speed: 2
-    m_Value: {x: 31.14388, y: 4.2586894, z: -52.68561}
+    m_Value: {x: 4.5060453, y: 1.2817085, z: -52.67404}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -684,9 +684,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.86093
+    m_Target: 12.523757
     speed: 2
-    m_Value: 23.86093
+    m_Value: 12.523757
   m_Ortho:
     m_Target: 1
     speed: 2
