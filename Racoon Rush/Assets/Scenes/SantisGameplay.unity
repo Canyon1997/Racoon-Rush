@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3638740805522058882, guid: c53d181119f982a45ae255aa8c9cc057, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18.099976
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638740805522058882, guid: c53d181119f982a45ae255aa8c9cc057, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.199997
+      objectReference: {fileID: 0}
     - target: {fileID: 3638740805522058883, guid: c53d181119f982a45ae255aa8c9cc057, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -997,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8cf924973022540b7cc6c9449311e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 200
+  jumpForce: 210
   jumped: 0
   maxJumps: 0
   sounds: {fileID: 937269057}

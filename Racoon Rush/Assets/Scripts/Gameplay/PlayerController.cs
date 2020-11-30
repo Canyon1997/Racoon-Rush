@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
 
     public Text highScore;
 
+    private float maxSpeed = 15f; //max amount that the character's speed can go 
+
+    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +62,8 @@ public class PlayerController : MonoBehaviour
         }
 
         rb.AddForce(Vector2.right * moveSpeed);
+
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed); //set's the limit of the raccoon's speed
     }
 
     private void QuitGame()
