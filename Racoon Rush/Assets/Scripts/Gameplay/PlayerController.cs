@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
+    public Animator animator;
 
     [Header("Character")]
     public float moveSpeed;
@@ -45,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
+
         //UI Display & Updates
         ScoreUI();
         IncreaseScore();
@@ -64,6 +67,8 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(Vector2.right * moveSpeed);
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed); //set's the limit of the raccoon's speed
+
+        animator.SetFloat("Speed", 1);
     }
 
     private void QuitGame()

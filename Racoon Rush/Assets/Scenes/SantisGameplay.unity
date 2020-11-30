@@ -988,6 +988,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8275832173773736485, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
   m_PrefabInstance: {fileID: 2006867530597387554}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &937269052
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937269051}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50aabb12c1df200438143aa51cfed61a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &937269055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7101774903699305914, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
@@ -2089,6 +2108,10 @@ PrefabInstance:
       propertyPath: candyMoveSpeedIncrease
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 937269052}
     - target: {fileID: 937269054, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_Mass
       value: 0.5
