@@ -8,10 +8,14 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     public Animator animator;
+    public static float staticMovementSpeed;
+
+    private float savedSpeed;
+    private float maxSpeed = 15f; //max amount that the character's speed can go 
 
     [Header("Character")]
     public float moveSpeed;
-    [SerializeField] private float candyMoveSpeedIncrease;
+    private float originalMoveSpeed;
 
     [Header("Audio")]
     public AudioSource sounds;
@@ -21,16 +25,23 @@ public class PlayerController : MonoBehaviour
     public Text scoreText;
     private int score = 0;
     private float lastUpdate = 0;
-
-    private bool isSlowed;
-    public static float staticMovementSpeed;
-    public float trapSlowTime = 2f;
-    private float savedSpeed;
-
     public Text highScore;
 
-    private float maxSpeed = 15f; //max amount that the character's speed can go 
+    [Header("PowerUp Speed and Time")]
+    [SerializeField] private float candyMoveSpeedIncrease;
+    [SerializeField] private float candyPowerUpTime;
 
+    private bool hitCandy;
+
+    [Header("Trap Speed and Times")]
+    [SerializeField] private float trashCanPenaltySpeed;
+    [SerializeField] private float mouseTrapPenaltySpeed;
+
+    [SerializeField] private float mouseTrapPenaltyTime;
+    [SerializeField] private float trashPenaltyTime;
+
+    private bool hitTrashCan;
+    private bool hitMouseTrap;
     
 
     private void Awake()
@@ -42,12 +53,12 @@ public class PlayerController : MonoBehaviour
     {
         ScoreUI();
         HighScore();
+
+        originalMoveSpeed = moveSpeed;
     }
 
     private void Update()
     {
-        
-
         //UI Display & Updates
         ScoreUI();
         IncreaseScore();
@@ -65,10 +76,6 @@ public class PlayerController : MonoBehaviour
         }
 
         rb.AddForce(Vector2.right * moveSpeed);
-
-        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed); //set's the limit of the raccoon's speed
-
-        animator.SetFloat("Speed", 1);
     }
 
     private void QuitGame()
@@ -86,8 +93,6 @@ public class PlayerController : MonoBehaviour
             score++;
             lastUpdate = Time.time;
         }
-
-        
     }
 
     //UI
@@ -101,7 +106,6 @@ public class PlayerController : MonoBehaviour
             //Get a particle effect/sound to congratulate new high score
             highScore.text = "High Score: " + score.ToString();
         }
-        
     }
 
     void HighScore()
@@ -116,49 +120,74 @@ public class PlayerController : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
-        
     }
 
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isSlowed)
-		{
-			staticMovementSpeed = moveSpeed;
-		}
-        
         if (other.gameObject.CompareTag("Trash"))
         {
-			Destroy(other.gameObject);
-            sounds.PlayOneShot(pickupSound);
             score += 100;
-            
+            sounds.PlayOneShot(pickupSound);
+            Destroy(other.gameObject);
         }
 
         else if (other.gameObject.CompareTag("Trap"))
         {
-            if (!isSlowed)
-			{
-				StartCoroutine(TrapSlow());
-				isSlowed = true;
-                //Need a sound for this pickup
-			}
+            if(!hitMouseTrap && !hitTrashCan)
+            {
+                StartCoroutine(MouseTrapSlow());
+                hitMouseTrap = true;
+                //Need a sound for this
+            }
+            Destroy(other.gameObject);
         }
 
         else if(other.gameObject.CompareTag("Candy"))
         {
-            moveSpeed += candyMoveSpeedIncrease;
+            if(!hitCandy)
+            {
+                StartCoroutine(CandySpeedIncrease());
+                hitCandy = true;
+                //Need sound for this
+            }
             Destroy(other.gameObject);
-            //Need a sound for this pickup
+
+        }
+
+        else if(other.gameObject.CompareTag("TrashCan"))
+        {
+            if(!hitTrashCan)
+            {
+                StartCoroutine(TrashCanSlow());
+                hitTrashCan = true;
+                //Need sound for this
+            }
+            Destroy(other.gameObject);
         }
     }
 
-    IEnumerator TrapSlow()
+    IEnumerator CandySpeedIncrease()
+    {
+        moveSpeed = candyMoveSpeedIncrease;
+        yield return new WaitForSeconds(candyPowerUpTime);
+        moveSpeed = originalMoveSpeed;
+        hitCandy = false;
+    }
+
+    IEnumerator MouseTrapSlow()
 	{
-		var savedSpeed = moveSpeed;
-		moveSpeed -= (moveSpeed / 1.5f);
-		yield return new WaitForSeconds(trapSlowTime);
-		moveSpeed = savedSpeed;
-		isSlowed = false;
+        moveSpeed = mouseTrapPenaltySpeed;
+		yield return new WaitForSeconds(mouseTrapPenaltyTime);
+		moveSpeed = originalMoveSpeed;
+		hitMouseTrap = false;
 	}
+
+    IEnumerator TrashCanSlow()
+    {
+        moveSpeed = trashCanPenaltySpeed;
+        yield return new WaitForSeconds(trashPenaltyTime);
+        moveSpeed = originalMoveSpeed;
+        hitTrashCan = false;
+    }
 }

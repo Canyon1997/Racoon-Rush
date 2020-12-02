@@ -335,7 +335,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22c71277138c754cac31167fc7496a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  enemyMoveSpeed: 8
 --- !u!61 &103893288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -998,7 +998,7 @@ Animator:
   m_GameObject: {fileID: 937269051}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50aabb12c1df200438143aa51cfed61a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ce71c9edda60ae4a9561af44bb54ff3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22c71277138c754cac31167fc7496a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  enemyMoveSpeed: 6
 --- !u!61 &980647159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1389,7 +1389,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1851,6 +1851,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 937407047385361291, guid: 3758e57fe9d47ee4ca7f7ad288b7f71d, type: 3}
+      propertyPath: candyChance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 937407048034291956, guid: 3758e57fe9d47ee4ca7f7ad288b7f71d, type: 3}
       propertyPath: m_ShapeTexture
       value: 
@@ -2106,12 +2110,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: candyMoveSpeedIncrease
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 937269052}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: candyPowerUpTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: trashCanPenaltySpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: mouseTrapPenaltySpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: mouseTrapPenaltyTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 937269052, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
+      propertyPath: trashPenaltyTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 937269054, guid: ed5b8b05ea780154eae0ac40c09f97cb, type: 3}
       propertyPath: m_Mass
       value: 0.5
@@ -2247,6 +2271,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8278631882434237319, guid: a7d7e5a38151e164a80ddb0cbd4ef49e, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278631882434237321, guid: a7d7e5a38151e164a80ddb0cbd4ef49e, type: 3}
+      propertyPath: candyChance
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

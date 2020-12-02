@@ -5,12 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
-	public float movementSpeed = 3f;
+    private Rigidbody2D rb;
 
-    private void Update()
+    [Header("Enemy")]
+    [SerializeField] private float enemyMoveSpeed;
+
+    private void Awake() => rb = GetComponent<Rigidbody2D>();
+
+    /*private void Update()
 	{
 		transform.Translate(Vector2.right * Time.deltaTime * movementSpeed);
-	}
+	}*/
+
+    private void FixedUpdate()
+    {
+        if(rb.velocity.magnitude > enemyMoveSpeed)
+        {
+            return;
+        }
+
+        rb.AddForce(Vector2.right * enemyMoveSpeed);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,9 +37,9 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("TrashCan"))
+        if (other.gameObject.CompareTag("TrashCan"))
         {
             Destroy(other.gameObject);
         }
