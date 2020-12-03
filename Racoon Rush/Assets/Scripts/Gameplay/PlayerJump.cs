@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
 
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
     public float jumpForce;
 
     public bool jumped;
@@ -37,6 +38,7 @@ public class PlayerJump : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce);
             sounds.PlayOneShot(jumpSound);
             maxJumps++;
+            animator.SetBool("HasJumped", true);
         }
     }
 
@@ -46,6 +48,7 @@ public class PlayerJump : MonoBehaviour
         {
             maxJumps = 0;
             jumped = false;
+            animator.SetBool("HasJumped", false);
         }
     }
 }
