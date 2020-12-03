@@ -1890,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewRaccoon
       objectReference: {fileID: 0}
+    - target: {fileID: 7437997165882604632, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7437997165882604635, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
