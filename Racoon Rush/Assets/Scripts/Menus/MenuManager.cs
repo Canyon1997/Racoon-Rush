@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     
     void Start()
     {
-        
+        Cursor.visible = true; //mouse cursor will be visible in main menu and game over screen
     }
 
     public void NewGame()

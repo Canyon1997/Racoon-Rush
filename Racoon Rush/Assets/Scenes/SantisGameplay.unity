@@ -1336,6 +1336,18 @@ PrefabInstance:
       propertyPath: mouseTrapPenaltySpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
+      propertyPath: mouseTrap
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ff0fa6745899c848b32cf6949a3b053, type: 3}
+    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
+      propertyPath: metalTrashcan
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e13eb71f8eb46342b10afe51a8a2e97, type: 3}
+    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
+      propertyPath: foodCrunch
+      value: 
+      objectReference: {fileID: 8300000, guid: 0218129ba38612445a4ee9a6e0700818, type: 3}
     - target: {fileID: 7437997165882604632, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
       propertyPath: m_Name
       value: NewRaccoon
@@ -1488,6 +1500,10 @@ PrefabInstance:
     - target: {fileID: 8853326619218755269, guid: 9af67aa23a2a09348b4d05a621a5bed9, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853326619218755269, guid: 9af67aa23a2a09348b4d05a621a5bed9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8853326619890505758, guid: 9af67aa23a2a09348b4d05a621a5bed9, type: 3}
       propertyPath: m_Mesh
