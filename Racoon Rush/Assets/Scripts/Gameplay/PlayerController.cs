@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     public Text scoreText;
-    private int score = 0;
+    public int score = 0;
     private float lastUpdate = 0;
     public Text highScore;
 
@@ -54,6 +54,9 @@ public class PlayerController : MonoBehaviour
         HighScore();
 
         originalMoveSpeed = moveSpeed;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
