@@ -1595,7 +1595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &743435545
 Transform:
   m_ObjectHideFlags: 0
@@ -3679,7 +3679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1792202129
 Transform:
   m_ObjectHideFlags: 0
@@ -4892,22 +4892,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1102869973005242846, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: m_Offset.x
-      value: -1.4273524
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102869973005242846, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: m_Size.x
-      value: 3.4978666
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102869973005242846, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.16355109
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102869973005242846, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: m_Size.y
-      value: 2.9328713
-      objectReference: {fileID: 0}
     - target: {fileID: 4378308045741544831, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
       propertyPath: m_Mass
       value: 0.5
@@ -4960,18 +4944,6 @@ PrefabInstance:
       propertyPath: trashPenaltyTime
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: mouseTrap
-      value: 
-      objectReference: {fileID: 8300000, guid: e0d7c7fe06a49b143b72e1d323bb72aa, type: 3}
-    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: metalTrashcan
-      value: 
-      objectReference: {fileID: 8300000, guid: 3f7c31daaf1f028478df08189a30ec9b, type: 3}
-    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
-      propertyPath: foodCrunch
-      value: 
-      objectReference: {fileID: 8300000, guid: dcd621e8ec5d8e043ac773ef71de6d05, type: 3}
     - target: {fileID: 6822026871710989729, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
       propertyPath: jumpSound
       value: 
