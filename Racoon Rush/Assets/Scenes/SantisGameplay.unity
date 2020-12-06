@@ -1348,6 +1348,10 @@ PrefabInstance:
       propertyPath: foodCrunch
       value: 
       objectReference: {fileID: 8300000, guid: 0218129ba38612445a4ee9a6e0700818, type: 3}
+    - target: {fileID: 4955342941718124585, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7437997165882604632, guid: 5ac763ff954aad84dace911bc5125b5c, type: 3}
       propertyPath: m_Name
       value: NewRaccoon

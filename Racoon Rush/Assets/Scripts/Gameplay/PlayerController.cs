@@ -61,12 +61,12 @@ public class PlayerController : MonoBehaviour
 
         originalMoveSpeed = moveSpeed;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
     }
 
     private void Update()
     {
+
         //UI Display & Updates
         ScoreUI();
         IncreaseScore();

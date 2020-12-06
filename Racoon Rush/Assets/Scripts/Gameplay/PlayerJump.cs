@@ -29,6 +29,10 @@ public class PlayerJump : MonoBehaviour
         {
             jumped = Input.GetButtonDown("Jump");
         }
+      else if(!jumped)
+        {
+            jumped = Input.touches[0].phase == TouchPhase.Began;
+        }
     }
 
     private void FixedUpdate()
