@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
     public AudioSource sounds;
     public AudioClip pickupSound;
 
+    public AudioClip mouseTrap;
+
+    public AudioClip foodCrunch;
+
+    public AudioClip metalTrashcan;
+
     [Header("UI")]
     public Text scoreText;
     private int score = 0;
@@ -137,7 +143,7 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(MouseTrapSlow());
                 hitMouseTrap = true;
-                //Need a sound for this
+                sounds.PlayOneShot(mouseTrap);
             }
             Destroy(other.gameObject);
         }
@@ -148,7 +154,7 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(CandySpeedIncrease());
                 hitCandy = true;
-                //Need sound for this
+                sounds.PlayOneShot(foodCrunch);
             }
             Destroy(other.gameObject);
 
@@ -160,7 +166,7 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(TrashCanSlow());
                 hitTrashCan = true;
-                //Need sound for this
+                sounds.PlayOneShot(metalTrashcan);
             }
             Destroy(other.gameObject);
         }
